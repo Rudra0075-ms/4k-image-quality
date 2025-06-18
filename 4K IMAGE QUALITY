@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4K Image Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full">
+      <picture>
+        <source srcset="images/hero-4k.webp" media="(min-width: 2560px)" />
+        <source srcset="images/hero-2k.webp" media="(min-width: 1440px)" />
+        <img
+          src="images/hero-default.webp"
+          alt="Hero Banner"
+          class="object-cover w-full h-full"
+          loading="eager"
+        />
+      </picture>
+      <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+        <div class="text-center text-white px-4">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4">Experience 4K Clarity</h1>
+          <p class="text-lg md:text-2xl mb-6">Ultra-high-resolution imagery for modern screens</p>
+          <a href="#gallery" class="bg-white text-black px-6 py-3 text-lg rounded hover:bg-gray-200 transition">Get Started</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 px-4 max-w-7xl mx-auto">
+      <h2 class="text-3xl font-semibold text-center mb-12">Stunning 4K Image Showcase</h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Repeat for each image -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+          <img src="images/gallery/image-1.webp" alt="Gallery Image 1" class="w-full h-64 object-cover" loading="lazy" />
+          <div class="p-4">
+            <p class="text-lg font-medium">Image 1</p>
+          </div>
+        </div>
+
+        <!-- Duplicate block below for additional images -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+          <img src="images/gallery/image-2.webp" alt="Gallery Image 2" class="w-full h-64 object-cover" loading="lazy" />
+          <div class="p-4">
+            <p class="text-lg font-medium">Image 2</p>
+          </div>
+        </div>
+
+        <!-- Add more cards as needed -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-sm text-gray-500">
+      © 2025 4K Vision. All rights reserved.
+    </footer>
+  </body>
+</html>
